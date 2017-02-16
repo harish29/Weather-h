@@ -17,13 +17,13 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     @IBOutlet weak var condition: UILabel!
     
-    @IBOutlet weak var humidity: UILabel!
-   
     @IBOutlet weak var feel: UILabel!
+   
     
-    @IBOutlet weak var wind: UILabel!
   
+    @IBOutlet weak var wind: UILabel!
     
+    @IBOutlet weak var humidity: UILabel!
     
    
     
@@ -36,7 +36,6 @@ class ViewController: UIViewController, UISearchBarDelegate {
     var myfeel: Double!
     var myWind: Double!
     var imgurl: String!
-    
     
     
     var exists: Bool = true
@@ -70,7 +69,6 @@ let myurl = URLRequest(url: URL(string: "http://api.apixu.com/v1/current.json?ke
                         if let cur = json["location"] as? [String:AnyObject]{
                             if let name = cur["name"] as? String{
                                 self.city = name
-                                
                                 
                                 
                             }
